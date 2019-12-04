@@ -1,0 +1,256 @@
+print(''' IIIIIIII---------------------------------------IIIIIIII
+ IIIIIII------------I  Welcome!  I----------I     IIIIII                   
+ IIIIIII------------------------------------I     IIIIII                                              
+ IIIIIII  This game has been developed by,  I     IIIIII
+ IIIIIII------------------------------------I     IIIIII
+ IIIIIII         I  Michael Adolph I              IIIIII
+ IIIIIII        I-------------------I             IIIIII
+ IIIIIII        I   I call it...    I             IIIIII
+ IIIIIII        I-------------------I             IIIIII
+ IIIIIII        I   Murder Party!   I             IIIIII
+ IIIIIII        I-------------------I             IIIIII
+ IIIIIII                                          IIIIII
+ IIIIIII------------------------------------------IIIIII
+''')
+print('''
+Please, choose a name for your character...''')
+CharName=input('Character Name: ')
+def CharaWelcome():
+    print(' Welcome %s, please choose a gamemode.'% CharName)
+CharaWelcome()
+print('''
+Currently, there is only one game mode, sorry.''')
+
+print('''
+              I------------------------I
+              I Choose your gamemode!  I
+              I      I----------I      I
+              I------I  Normal  I------I
+                     I----------I''')
+Difficulty=input('Difficulty Level:')
+if Difficulty=="Normal":
+    print('''
+You have chosen gamemode 'Normal' Enjoy your game!''')
+elif Difficulty!="Normal":
+    print('You have incorrectly stated a GameMode. You have failed the game. at the most simplest part. are you proud?')
+    print('''
+    I----------I
+    I   Game   I
+    I   Over   I
+    I    !!    I
+    I----------I''')
+def GameScenario1Level1():
+    print('''
+You have chosen Scenario 1!''')
+    print('''
+%s wakes up in a dungeon, reeking of death and a shallow breathing sounds nearby.''' % CharName)
+    print('''
+%s has barely enough light to see.''' % CharName)
+    print('''%s notices they are locked in a cell.''' % CharName)
+    print('''
+%s has a few options.
+1. Shake the cell bars and try to break them
+2. Quietly try to open the cell door
+3. Yell out for help and shake the cell bars
+4. Go to sleep
+5. End Life''' % CharName)
+    PlayerChoice=input('Choice Number (1-5): ')
+    if PlayerChoice=="1":
+        print('''
+You have chosen choice %s''' % PlayerChoice)
+        print('''
+You violently shake the cell bars. The door falls of the hinges landing on the floor with a very loud bang''')
+        print('''
+You have several choices which do you prefer?
+    1. Run straight out of the cell
+    2. Wait a few moments then run out of the cell
+    3. Wait inside the cell and do nothing''')
+        PlayerChoice=input('''
+Choice Number (1-3): ''')
+        if PlayerChoice=="1":
+            print('''
+You chose choice number %s''' % PlayerChoice)
+            print('''
+%s runs straight out of the cell.'''% CharName)
+            print('''%s exits the cell''' % CharName)
+            print('''%s bumps into a horrid looking creature. The creature has several eyes, is a putrid green color,
+has 3 legs coming out of the bottom of it, and razor sharp teeth.''' % CharName)
+            print('''The creature notices %s'''% CharName)
+            print('''The creature decides to bite %s.''' %CharName)
+            print('''Its razor sharp teeth pierce %s's lower stomach. The pain is immense.'''% CharName)
+            print(''' %s's vision goes dark.''' % CharName)
+            print('''
+    I----------I
+    I   Game   I
+    I   Over   I
+    I    !!    I
+    I----------I''')
+    
+        if PlayerChoice=="2":
+            print('''
+You chose choice number %s''' % PlayerChoice)
+            print('''
+%s decides to wait inside of the cell''' % CharName)
+            print('''
+As %s is about to move outside of the cell a horrible creature enters the cell''' % CharName)
+            print('''
+The creature walks in the cell fully on three legs. It has several eyes and smells like rotting food''')
+            print(''' %s has a few options
+1. Sneak past the creature and exit the cell
+2. Shove down the creature and run out of the cell
+3. Attack the creature using surprise as a tactic
+4. Sit still and wait''')
+            PlayerChoice=input('''
+Choice Number (1-4): ''')
+            if PlayerChoice=="1":
+                print('example')
+            if PlayerChoice=="2":
+                print('example')
+            if PlayerChoice=="3":
+                print('example')
+            if PlayerChoice=="4":
+                print('example')
+            
+        if PlayerChoice=="3":
+            print('''
+You chose choice number %s''' % PlayerChoice)
+    elif PlayerChoice=="2":
+        print('''
+You have chosen choice %s''' % PlayerChoice)
+        print('%s quietly approach the cell door and queitly open the door.'% CharName)
+    elif PlayerChoice=="3":
+        print('''
+You have chosen choice %s''' % PlayerChoice)
+        print('%s jolts upward and run toward the cell bars. You shake them violently and yell out for help.'% CharName)
+    elif PlayerChoice=="4":
+        print('''
+You have chosen choice %s''' % PlayerChoice)
+        print('After waking up you decide that it is just a nightmare and decide to go back to sleep.')
+        print('You wake up to a dark figure standing over you, the figure brandishes something with a bright reflecttion. The figure thrusts at you and your vision goes dark')
+        print('''
+    I----------I
+    I   Game   I
+    I   Over   I
+    I    !!    I
+    I----------I''')
+    elif PlayerChoice=="5":
+        print('''
+You have chosen choice %s''' % PlayerChoice)
+        def CharSuicide():
+            print('''
+%s, you have decided to end your own life. I am very, very disappointed in you.''' % CharName)
+            print('''
+    I----------I
+    I   Game   I
+    I   Over   I
+    I    !!    I
+    I----------I''')
+        CharSuicide()
+    def GameScenario1Level2():
+        print('example')
+    def GameScenario1Level3():
+        print('example')
+    def GameScenario1Level4():
+        print('example')
+    def GameScenario1Level5():
+        print('example')
+    def GameScenario1Level6():
+        print('example')
+    def GameScenario1Level7():
+        print('example')
+    def GameScenario1Level8():
+        print('example')
+    def GameScenario1Level9():
+        print('example')
+    def GameScenario1Level10():
+        print('example')
+    
+def GameScenario2Level1():
+    print('example')
+    def GameScenario2Level2():
+        print('example')
+    def GameScenario2Level3():
+        print('example')
+    def GameScenario2Level4():
+        print('example')
+    def GameScenario2Level5():
+        print('example')
+    def GameScenario2Level6():
+        print('example')
+    def GameScenario2Level7():
+        print('example')
+    def GameScenario2Level8():
+        print('example')
+    def GameScenario2Level9():
+        print('example')
+    def GameScenario2Level10():
+        print('example')
+    
+def GameScenario3Level1():
+    print('example')
+    def GameScenario3Level2():
+        print('example')
+    def GameScenario3Level3():
+        print('example')
+    def GameScenario3Level4():
+        print('example')
+    def GameScenario3Level5():
+        print('example')
+    def GameScenario3Level6():
+        print('example')
+    def GameScenario3Level7():
+        print('example')
+    def GameScenario3Level8():
+        print('example')
+    def GameScenario3Level9():
+        print('example')
+    def GameScenario3Level10():
+        print('example')
+    
+def GameScenario4Level1():
+    print('example')
+    def GameScenario4Level2():
+        print('example')
+    def GameScenario4Level3():
+        print('example')
+    def GameScenario4Level4():
+        print('example')
+    def GameScenario4Level5():
+        print('example')
+    def GameScenario4Level6():
+        print('example')
+    def GameScenario4Level7():
+        print('example')
+    def GameScenario4Level8():
+        print('example')
+    def GameScenario4Level9():
+        print('example')
+    def GameScenario4Level10():
+        print('example')
+    
+def GameScenario5Level1():
+    print('example')
+    def GameScenario5Level2():
+        print('example')
+    def GameScenario5Level3():
+        print('example')
+    def GameScenario5Level4():
+        print('example')
+    def GameScenario5Level5():
+        print('example')
+    def GameScenario5Level6():
+        print('example')
+    def GameScenario5Level7():
+        print('example')
+    def GameScenario5Level8():
+        print('example')
+    def GameScenario5Level9():
+        print('example')
+    def GameScenario5Level10():
+        print('example')
+    
+print('''
+To start your game, choose a number between 1-5''')
+NC=input('')
+if NC=="1":
+    GameScenario1Level1()
