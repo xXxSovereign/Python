@@ -1,0 +1,36 @@
+import re
+import time
+
+print('Michael A. 11/19/19')
+
+p = re.compile("(?P<word>[a-zA-Z]+)")
+
+def main():
+ while True:
+   x = 3
+   while x > 0:
+     print("Starting in {}...".format(x))
+     x -= 1
+     time.sleep(1)
+
+   print('''\nYou are talking to a bot!
+  
+   Hi what's your name?\n''')
+
+   match = p.search(p, input(''))
+   name = match.group("word")
+
+   print('\nHi {}, im Dad Bot!'.format(name))
+
+   time.sleep(5)
+
+   restart = input("\nWould you like to go again?\n")
+
+   if restart == 'yes' or restart == 'Yes':
+     main()
+
+   else:
+     print('Bye!')
+
+main()
+
