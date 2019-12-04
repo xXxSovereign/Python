@@ -1,0 +1,81 @@
+import re
+import time
+import datetime
+from random import choice
+import PassGen
+
+
+def main():
+
+    print('''Supports:
+    -Asking time/date
+    -Asking name
+    -Asking for a password *just say 'password' 
+    -Greetings (Hello, Hi, etc.) ''')
+
+    class Re:
+
+        ugreet = re.compile("(?P<word>^(Hi|Hello|Greetings|Mornin[g']?|Yo|Afternoon|What'?s up)[?]?)", re.IGNORECASE)
+        uname = re.compile("(?P<word>^(What'?s your name|What should i call you)[?]?)", re.IGNORECASE)
+        ubeing = re.compile("(?P<word>^(How are you|How are you doing|Are you okay) ?[?]?)", re.IGNORECASE)
+        utime = re.compile("(?P<word>)^(What'?s the time|What time is it|What is the time)[?]?$", re.IGNORECASE)
+        udate = re.compile("(?P<word>)^(What'?s the date|What date is it|What's today|What('?s| is) today)[?]?$", re.IGNORECASE)
+        upass = re.compile("(?P<word>)^(Can i have a password[?]?|password| (gen|generate) password)$", re.IGNORECASE)
+
+    patterns = [Re.ugreet, Re.uname, Re.ubeing, Re.utime, Re.udate, Re.upass]
+
+    class Response:
+
+        bgreet = ["Hi", "Hello", "Greetings", "Yo"]
+        bbeing = ["Fine", "Okay", "Good", "Perfect"]
+
+    def search(patterns, userin):
+
+        matches = []
+
+        for i in patterns:
+
+            matchr = i.search(userin)
+
+            if matchr:
+                matches.append(True)
+
+            else:
+                matches.append(False)
+
+        return matches
+
+    def switchandfind(matches):
+
+        def date():
+            timestamp = time.time()
+            value = datetime.datetime.fromtimestamp(timestamp)
+            return value.strftime('%Y-%m-%d')
+
+        def ctime():
+            timestamp = time.time()
+            value = datetime.datetime.fromtimestamp(timestamp)
+            return value.strftime('%H:%M:%S')
+
+        switches = {
+            0: choice(Response.bgreet),
+            1: "Conversation Bot",
+            2: choice(Response.bbeing),
+            3: ctime(),
+            4: date(),
+            5: PassGen.gen()
+        }
+
+        for index, i in enumerate(matches):
+
+            if i:
+                print(switches.get(index))
+
+            else:
+                pass
+
+    while True:
+        switchandfind(search(patterns, input()))
+
+
+main()
