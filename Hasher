@@ -1,0 +1,15 @@
+import string
+
+alpha = list(string.ascii_letters)
+digits = list(string.digits)
+
+
+hashes = {}
+
+for i in alpha:
+ hashes[i] = hash(i)
+
+for i in digits:
+ hashes[i] = hash(i)
+
+print(hashes)
