@@ -1,0 +1,10 @@
+import re
+
+phrase = "i went on news. today, it wasn't as good as https://repl.it/languages/python3"
+
+pattern = "(https?://)?[^ ]+[.][^ ]+(/[^ ])*"
+
+
+x = re.search(pattern, phrase)
+
+print(x)
