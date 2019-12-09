@@ -12,4 +12,5 @@ for i in alpha:
 for i in digits:
  hashes[i] = hash(i)
 
-print(hashes)
+for key in hashes:
+  print(str(key) + " : " + str(hashes[key]))
