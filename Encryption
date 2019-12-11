@@ -1,0 +1,38 @@
+def Alg1(UIHash):
+  Encrypt = ["", "", "$", "", "", "", ]
+  print("Alg1")
+  return Encrypt
+
+def Alg2(UIHash):
+  Encrypt = ["", "", "", "^", "", "", ]
+  print("Alg2")
+  return Encrypt
+
+def Alg3(UIHash):
+  Encrypt = ["", "", "", "", "|", "", ]
+  print("Alg3")
+  return Encrypt
+
+def Alg4(UIHash):
+  Encrypt = ["", "", "", "", "", "_", ]
+  print("Alg4")
+  return Encrypt
+
+
+
+
+UserIn = input("Input here: ")
+
+UIHash = list(str(hash(UserIn))); print(UIHash)
+
+if UIHash[0] != "-" and int(UIHash[0]) % 2 == 0:
+  Alg1(UIHash)
+
+elif UIHash[0] == "-" and int(UIHash[1]) % 2 == 0:
+  Alg2(UIHash)
+
+elif UIHash[0] != "-" and int(UIHash[0]) % 2 == 1:
+  Alg3(UIHash)
+
+elif UIHash[0] == "-" and int(UIHash[1]) % 2 == 1:
+  Alg4(UIHash)
