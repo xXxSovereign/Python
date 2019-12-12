@@ -1,0 +1,16 @@
+import CharDictGen
+
+Dict = CharDictGen.Gen();
+
+rangechk = range(0, 94)
+
+for j, i in zip(sorted(Dict), rangechk):
+        if j != i:
+            print("Faulty : Location: ", i, '\n')
+            for i in sorted(Dict):
+                print(str(i) + ": ", '"' + Dict[i] + '"' + ",")
+            break
+
+else:
+    print("No Faults\n")
+    print(sorted(Dict))
