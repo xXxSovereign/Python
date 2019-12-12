@@ -1,0 +1,23 @@
+def Gen():
+    import random
+
+    Dict = {}
+
+    x = 93
+    z = 0
+    chklis = []
+
+    lis = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-=[];'\"\,./~!@#$%^&*()_+{}|:<>?")
+
+    while x > 0:
+        x -= 1
+        y = random.choice(lis)
+
+        if y not in chklis:
+            Dict[z] = y
+            z += 1
+            chklis.append(y)
+        else:
+            x += 1
+
+    return(Dict)
