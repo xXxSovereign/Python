@@ -1,22 +1,14 @@
 def Alg1(UIHash):
-  Encrypt = ["", "", "$", "", "", "", ]
-  print("Alg1")
-  return Encrypt
+  SpecialChar = "$"
 
 def Alg2(UIHash):
-  Encrypt = ["", "", "", "^", "", "", ]
-  print("Alg2")
-  return Encrypt
+  SpecialChar = "^"
 
 def Alg3(UIHash):
-  Encrypt = ["", "", "", "", "|", "", ]
-  print("Alg3")
-  return Encrypt
+  SpecialChar = "|"
 
 def Alg4(UIHash):
-  Encrypt = ["", "", "", "", "", "_", ]
-  print("Alg4")
-  return Encrypt
+  SpecialChar = "_"
 
 
 
