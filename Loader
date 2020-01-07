@@ -1,0 +1,23 @@
+#Michael Adolph 1/4/20
+
+def Load(filename, fileExt):
+    file = open(r"C:\Users\micha\Desktop\Save Data for Python\{}.{}".format(filename, fileExt), "r")
+
+    file_contents = file.readlines()
+
+    nlis = []
+    retval = []
+
+    for i in file_contents:
+        nlis.append(i.strip("\n"))
+
+    for i in nlis:
+        h = list(i)
+        if h[0] == '#' and h[1] == '-':
+            pass
+        else:
+            retval.append(i)
+
+    return retval
+
+    file.close()
