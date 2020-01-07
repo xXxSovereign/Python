@@ -1,0 +1,61 @@
+#Michael Adolph 1/4/20
+
+def OvWrSave(filename, fileExt, data, header):
+    file = open(r"C:\Users\micha\Desktop\Save Data for Python\{}.{}".format(filename, fileExt), "w+")
+    if type(header) in [list, tuple]:
+        nheader = ""
+        for i in header:
+            nheader += str(i) + " "
+        file.write("\n#- {} -#\n".format(nheader))
+
+    elif type(header) == dict:
+        raise TypeError("dict is not a valid header type")
+
+    else:
+        file.write("#- {} -#\n".format(header))
+
+    if type(data) in [str, int, float]:
+        file.write(data)
+
+    elif type(data) in [list, tuple]:
+        for idx, i in enumerate(data):
+            if idx == len(data) - 1:
+                file.write("{}".format(i))
+            else:
+                file.write("{}, ".format(i))
+
+    elif type(data) == dict:
+        keys = list(data.keys())
+        values = list(data.values())
+
+        for idx, i in enumerate(keys):
+            file.write("{} : {}\n".format(i, values[idx]))
+
+    else:
+        raise TypeError("Only str, int, float, list, tuple, and dict are valid")
+
+def ASave(filename, fileExt, data):
+    file = open(r"C:\Users\micha\Desktop\Save Data for Python\{}.{}".format(filename, fileExt), "a+")
+
+    if type(data) in [str, int, float]:
+        file.write('\n' + data)
+
+    elif type(data) in [list, tuple]:
+        for idx, i in enumerate(data):
+            if idx == len(data) - 1:
+                file.write("{}".format(i))
+            else:
+                file.write("{}, ".format(i))
+
+    elif type(data) == dict:
+        keys = list(data.keys())
+        values = list(data.values())
+
+        for idx, i in enumerate(keys):
+            file.write("{} : {}\n".format(i, values[idx]))
+
+    else:
+        raise TypeError("Only str, int, float, list, tuple, and dict are valid")
+
+if __name__ == "__main__":
+    OvWrSave("Alexis", "txt", "Cake", "This is a file about cake")
