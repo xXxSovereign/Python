@@ -1,0 +1,22 @@
+Slis = [0, 1]
+Nlis = []
+index = 0
+
+n = 0
+
+chk = int(input("Value to cap?: "))
+
+while n <= chk:
+    n = Slis[index] + Slis[index + 1]
+    index += 1
+    Slis.append(n)
+
+for i in Slis:
+    if i % 2 == 0:
+        Nlis.append(i)
+
+n = 0
+for i in Nlis:
+    n += i
+
+print(n)
