@@ -1,0 +1,16 @@
+# https://en.wikipedia.org/wiki/Pythagorean_triple
+a = b, c = None, 0
+m = 2
+limit = 1000
+while m < limit:
+
+    for n in range(1, m):
+        a = m * m - n * n
+        b = 2 * (m*n)
+        c = m * m + n * n
+        if (a ** 2) + (b ** 2) == (c ** 2):
+            if a + b + c == 1000:
+                print("Values are {}, {}, and {}".format(a, b, c))
+                print("Ans = {}".format(a * b * c))
+
+    m += 1
