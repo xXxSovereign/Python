@@ -1,0 +1,24 @@
+import discord
+from discord.ext import commands
+import time as t
+
+client = commands.Bot(command_prefix="!")
+
+
+@client.event
+async def on_ready():
+    print("Bot is ready")
+
+
+@client.command()
+async def ping(ctx):
+    await ctx.send("Pong! {}ms".format(round(client.latency * 1000)))
+
+
+@client.command()
+async def sp(ctx):
+    for i in range(1, 2500):
+        await ctx.send("<@370664039124303872>")
+        t.sleep(1.25)
+
+client.run("Njc3MjI4MzY3NDg1MDc1NDY5.Xkw8hQ.LztAVIs2L8aaMSnhhAu_11Tpx6E")
