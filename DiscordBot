@@ -21,4 +21,4 @@ async def sp(ctx):
         await ctx.send("<@370664039124303872>")
         t.sleep(1.25)
 
-client.run("Njc3MjI4MzY3NDg1MDc1NDY5.Xkw8hQ.LztAVIs2L8aaMSnhhAu_11Tpx6E")
+client.run("INSERT TOKEN HERE")
