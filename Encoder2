@@ -1,0 +1,76 @@
+import random as r
+import string as s
+
+sum = 0
+nchars = list(s.printable)
+for i in [",", ":", "^", "!", "-", "~"]:
+    nchars.remove(i)
+chars = ""
+for i in nchars:
+    chars += i
+
+def RanString(len, chars):
+    retval = ""
+    for i in range(0, len):
+        retval += r.choice(chars)
+    return retval
+
+def OddPower(st):
+    factors = prime_factors(st)
+    odict = {}
+    retstr = ","
+    for j in factors:
+        if j not in odict:
+            odict[j] = 1
+        else:
+            odict[j] += 1
+
+    for h in odict:
+        retstr += "-{}\"~{}`{}|@{}#{}".format(h, RanString(r.randint(1, 2), chars), RanString(r.randint(1, 3), chars), RanString(r.randint(1, 3), chars), odict[h])
+
+    return retstr + ":"
+
+def EvenPower(st):
+    factors = prime_factors(st)
+    odict = {}
+    retstr = "^"
+    for j in factors:
+        if j not in odict:
+            odict[j] = 1
+        else:
+            odict[j] += 1
+
+    for h in odict:
+        retstr += "~{}${}_{}|{}{}".format(h, RanString(r.randint(1, 4), chars), RanString(r.randint(1, 3), chars), RanString(r.randint(1, 2), chars), odict[h])
+
+    return retstr + "!"
+
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+
+def lsum(lis):
+    retval = 0
+    for i in lis:
+        retval += i
+    return retval
+
+# DRIVER CODE
+
+inp = list(input("Input String Here: "))
+out = ""
+for i in inp:
+    if lsum(prime_factors(ord(i))) % 2 == 1:
+        out += OddPower(ord(i))
+    else: out += EvenPower(ord(i))
+
+print(out)
