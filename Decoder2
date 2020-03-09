@@ -1,1 +1,8 @@
-#CODE HERE
+import re as r
+
+#[^,:\^!\-\~]
+#^~2$t]_>|83~3$='B_[&|4 2!    = H
+#~{num1}${1-4chars}_{1-3chars}|{1-2chars}{num2}    = num1 ^ num2
+
+
+pattern = r.compile("(?P<quote>)")
